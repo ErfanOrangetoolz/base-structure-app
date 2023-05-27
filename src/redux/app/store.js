@@ -2,21 +2,21 @@ import { configureStore } from "@reduxjs/toolkit";
 import createSagaMiddleware from "redux-saga";
 import rootReducer from "./rootReducer";
 import rootSaga from "./rootSaga";
-import apiSlice from "./apiSlice";
-import localPersonalizedApiSlice from "./features/common/personalizedTag/localPersonalizedApiSlice";
+import logger from 'redux-logger'
+import { customLogger } from "./customMiddleware";
 
 const sagaMiddleware = createSagaMiddleware();
 
-const store = configureStore({
+const configStore = configureStore({
   reducer: rootReducer,
   middleware: (getDefaultMiddleware) =>
     getDefaultMiddleware({ serializableCheck: false }).concat(
+      customLogger,
+      logger,
       sagaMiddleware,
-      apiSlice.middleware,
-      localPersonalizedApiSlice.middleware
     ),
 });
 
 sagaMiddleware.run(rootSaga);
 
-export default store;
+export default configStore;

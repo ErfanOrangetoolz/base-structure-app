@@ -1,5 +1,5 @@
-export const SliceName = {
-	admin_login: '',
+export const sliceName = {
+	admin_login: 'admin_login',
 	user_login: '',
 	admin: '',
 	setting: '',
