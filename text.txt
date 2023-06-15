@@ -1,0 +1,39 @@
+color:
+text:
+primary text:
+secondary text:
+disabled text: 
+
+input:
+placeholder text:
+border text: 
+input text: 
+
+bg:
+main bg: 
+card bg: 
+header bg: 
+
+button: 
+primary button
+secondary button
+disabled button
+
+icon
+
+font size:
+title
+subtitle
+plan text
+
+
+font family:
+title:
+sub title:
+plan text/information
+italic
+disable
+
+
+primary border-radius
+secondary border-radius

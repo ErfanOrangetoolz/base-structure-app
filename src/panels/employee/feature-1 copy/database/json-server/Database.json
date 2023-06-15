@@ -1,0 +1,38 @@
+{
+	"login_tokens": [],
+	"admins" : [],
+	"employees": [],
+	"settings": [],
+	"locations": [],
+	"areas": [],
+	"clients": [],
+	
+	"deposite_types": [],
+	"client_deposite_accounts": [],
+	"client_deposite_account_transactions": [],
+
+	"client_loan_accounts": [],
+	"client_loan_account_transactions": [
+		"id", "client_id", "employee_id", "type", 
+		"total_amount", "profit_amount", "pay_amount", "saving_amount",
+		"created_at", "updated_at"
+	],
+
+	"deposite_reports": ["id", "date", "type", "amount"],
+	"loan_reports": ["id", "date", "amount"],
+	"profit_reports": ["id", "date", "amount"],
+
+	"admin_logs": [],
+	"setting_logs": [],
+	"employee_logs": [],
+	"location_logs": [],
+	"area_logs": [],
+	"client_logs": [],
+
+	"transaction_logs": [
+		"id", "employee_id", "client_id", "transaction_type", "ref_id",
+		"amount", "message"
+	],
+
+	"attachments": []
+}
