@@ -1,11 +1,11 @@
-import { BrowserRouter as Router } from "react-router-dom";
+import { RenderRouter } from "third-party-package-handler/RouterHelper";
 import RouterLogic from "./RouterLogic";
 
 const RouterIndex = () => {
   return (
-    <Router>
+    <RenderRouter>
       <RouterLogic />
-    </Router>
+    </RenderRouter>
   );
 };
 export default RouterIndex;

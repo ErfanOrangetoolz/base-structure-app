@@ -1,5 +1,5 @@
 import { ReactNode, createContext, useContext, useState } from "react";
-import RouterHelper from "../../third-party-package-handler/RouterHelper";
+import { useLocationHook, useNavigatorHook } from "third-party-package-handler/RouterHelper";
 
 interface authInfoData {
   consoleId: string;
@@ -26,8 +26,8 @@ type Props = {
 const ConsoleAuthContext = createContext<Context | null>(null);
 
 export const ConsoleAuthProvider = ({ children }: Props) => {
-  const localtion = RouterHelper.useLocationHook();
-  const navigate = RouterHelper.useNavigatorHook();
+  const localtion = useLocationHook();
+  const navigate = useNavigatorHook();
   const [auth, setAuth] = useState<ProviderStates>({
     isCreatingEnvironment: true,
     token: null,

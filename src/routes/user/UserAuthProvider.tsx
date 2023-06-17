@@ -1,5 +1,5 @@
 import { ReactNode, createContext, useContext, useState } from "react";
-import RouterHelper from "../../third-party-package-handler/RouterHelper";
+import { useLocationHook, useNavigatorHook } from "third-party-package-handler/RouterHelper";
 
 interface AuthInfo {
   userName: string;
@@ -24,9 +24,10 @@ type Props = {
 
 const UserAuthContext = createContext<Context | null>(null);
 
+// const TodoProvider: React.FC<React.ReactNode> = ({ children }) => {
 export const UserAuthProvider = ({ children }: Props) => {
-  const localtion = RouterHelper.useLocationHook();
-  const navigate = RouterHelper.useNavigatorHook();
+  const localtion = useLocationHook();
+  const navigate = useNavigatorHook();
   const [auth, setAuth] = useState<ProviderStates>({
     isCreatingEnvironment: true,
     token: null,
@@ -46,7 +47,7 @@ export const UserAuthProvider = ({ children }: Props) => {
       token: null,
       authInfo: null
     });
-    navigate("/console/login", { replace: true });
+    navigate("/login", { replace: true });
   };
   return (
     <UserAuthContext.Provider value={{ auth, saveAuth, resetAuth }}>
@@ -55,6 +56,8 @@ export const UserAuthProvider = ({ children }: Props) => {
   );
 };
 export default UserAuthProvider;
-export const useConsoleAuth = () => {
-  return useContext(UserAuthContext);
+export const useUserAuth = () => {
+  const { auth, saveAuth, resetAuth } = useContext(UserAuthContext) as Context;
+  const { authInfo, token, isCreatingEnvironment } = auth;
+  return { authInfo, token, isCreatingEnvironment, saveAuth, resetAuth };
 };

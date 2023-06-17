@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import RouterHelper from "../third-party-package-handler/RouterHelper";
+import { useLocationHook } from "third-party-package-handler/RouterHelper";
 import ConsoleRoutes from "./console/ConsoleRoutes";
 import UserRoutes from "./user/UserRoutes";
 
@@ -10,7 +10,7 @@ const routePrefix = {
 };
 
 const RouterLogic = () => {
-  const locationHook = RouterHelper.useLocationHook();
+  const locationHook = useLocationHook();
   const [access, setAccess] = useState("user");
   useEffect(() => {
     const localtion = locationHook.pathname;

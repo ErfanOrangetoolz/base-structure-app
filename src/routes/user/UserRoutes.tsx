@@ -1,34 +1,53 @@
-import { Outlet, Route, Routes } from "react-router-dom";
+import Dashboard from "panels/user/dashboard/Dashboard";
+import { RenderOutLet, RenderRoute, RenderRoutes } from "third-party-package-handler/RouterHelper";
 import PrivateRoute from "./PrivateRoute";
 import { UserAuthProvider } from "./UserAuthProvider";
 
 const UserRoutes = () => {
   return (
     <UserAuthProvider>
-      <Routes>
-        <Route
+      <RenderRoutes>
+        <RenderRoute
+          // loader
+          // errorElement
           path="/"
           element={
             <PrivateRoute>
-              <Outlet />
+              <RenderOutLet />
             </PrivateRoute>
           }
         >
-          <Route
-            path="dashboard"
-            element={
-              <div>
-                admin dashboard <Outlet />
-              </div>
-            }
-          >
-            <Route path=":id" element={<div> admin category id</div>} />
-          </Route>
-          <Route path="category" element={<div> admin category</div>} />
-        </Route>
-        <Route path="/login" element={<div>login</div>} />
-        <Route path="console/*" element={<div>no match route</div>} />
-      </Routes>
+          <RenderRoute path="dashboard" element={<Dashboard />} />
+        </RenderRoute>
+        <RenderRoute
+          path="/categories"
+          element={
+            <PrivateRoute>
+              <RenderOutLet />
+            </PrivateRoute>
+          }
+        >
+          <RenderRoute path=":id" element={<Dashboard />} />
+          <RenderRoute path="add" element={<Dashboard />} />
+          <RenderRoute path="edit/:id" element={<Dashboard />} />
+          <RenderRoute path="add-products-to-category/:id" element={<Dashboard />} />
+        </RenderRoute>
+        <RenderRoute
+          path="/products"
+          element={
+            <PrivateRoute>
+              <RenderOutLet />
+            </PrivateRoute>
+          }
+        >
+          <RenderRoute path=":id" element={<Dashboard />} />
+          <RenderRoute path="add" element={<Dashboard />} />
+          <RenderRoute path="edit/:id" element={<Dashboard />} />
+          <RenderRoute path="add-into-category" element={<Dashboard />} />
+        </RenderRoute>
+        <RenderRoute path="/login" element={<div>login</div>} />
+        <RenderRoute path="*" element={<div>no match route</div>} />
+      </RenderRoutes>
     </UserAuthProvider>
   );
 };
