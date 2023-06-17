@@ -40,7 +40,8 @@
     "format": "prettier --check --ignore-path .gitignore .",
     "format:fix": "npx prettier --write . \"!**/*.{.json}\" --ignore-path .gitignore .",
     "server": "",
-    "typecheck": "tsc"
+    "typecheck": "tsc",
+    "json-server": "json-server --watch ./src/redux/database/database.js --port 3000"
   },
   "eslintConfig": {
     "extends": [

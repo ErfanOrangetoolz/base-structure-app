@@ -1,4 +1,4 @@
-import { Routes, Route, Outlet } from "react-router-dom";
+import { Routes, Route, Outlet } from "react-router-dom"
 const ConsoleRoutes = () => {
   return (
     // auth provider will be here if needed or can be added into router logic file
@@ -17,6 +17,6 @@ const ConsoleRoutes = () => {
       <Route path='/console/login' element={<div>login</div>} />
       <Route path='*' element={<div>no match route</div>} />
     </Routes>
-  );
-};
-export default ConsoleRoutes;
+  )
+}
+export default ConsoleRoutes
