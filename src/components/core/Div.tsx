@@ -1,6 +1,6 @@
-import React, { ComponentProps } from "react";
+import { ComponentProps } from "react";
 
-interface DivProps extends ComponentProps<"div"> {}
+type DivProps = ComponentProps<"div">;
 
 const Div = ({ children, ...rest }: DivProps) => {
   return <div {...rest}>{children}</div>;

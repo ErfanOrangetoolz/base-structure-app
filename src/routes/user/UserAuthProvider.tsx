@@ -1,31 +1,30 @@
 import { ReactNode, createContext, useContext, useState } from "react";
 import RouterHelper from "../../third-party-package-handler/RouterHelper";
 
-interface authInfoData {
-  consoleId: string;
+interface AuthInfo {
   userName: string;
   password: string;
 }
 interface ProviderStates {
   isCreatingEnvironment: boolean;
   token: string | null;
-  authInfo: authInfoData | null;
+  authInfo: AuthInfo | null;
 }
-interface setAuthParams {
+interface AuthParams {
   needToRedirect: boolean;
 }
 type Context = {
   auth: ProviderStates;
-  saveAuth: (payload: ProviderStates, params: setAuthParams | null) => void;
+  saveAuth: (payload: ProviderStates, params: AuthParams | null) => void;
   resetAuth: () => void;
 };
 type Props = {
   children: ReactNode;
 };
 
-const ConsoleAuthContext = createContext<Context | null>(null);
+const UserAuthContext = createContext<Context | null>(null);
 
-export const ConsoleAuthProvider = ({ children }: Props) => {
+export const UserAuthProvider = ({ children }: Props) => {
   const localtion = RouterHelper.useLocationHook();
   const navigate = RouterHelper.useNavigatorHook();
   const [auth, setAuth] = useState<ProviderStates>({
@@ -33,7 +32,7 @@ export const ConsoleAuthProvider = ({ children }: Props) => {
     token: null,
     authInfo: null
   });
-  const saveAuth = (payload: Partial<ProviderStates>, params: Partial<setAuthParams> | null) => {
+  const saveAuth = (payload: Partial<ProviderStates>, params: Partial<AuthParams> | null) => {
     setAuth({ ...auth, ...payload });
     if (params && params.needToRedirect) {
       const path = localtion.state?.path || "/";
@@ -50,12 +49,12 @@ export const ConsoleAuthProvider = ({ children }: Props) => {
     navigate("/console/login", { replace: true });
   };
   return (
-    <ConsoleAuthContext.Provider value={{ auth, saveAuth, resetAuth }}>
+    <UserAuthContext.Provider value={{ auth, saveAuth, resetAuth }}>
       {children}
-    </ConsoleAuthContext.Provider>
+    </UserAuthContext.Provider>
   );
 };
-export default ConsoleAuthProvider;
+export default UserAuthProvider;
 export const useConsoleAuth = () => {
-  return useContext(ConsoleAuthContext);
+  return useContext(UserAuthContext);
 };
