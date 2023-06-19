@@ -1,5 +1,7 @@
-const admins = require("./json-server/admins.json");
+const users = require("./json-server/users");
 
 module.exports = () => ({
-  admins: admins,
+  users,
+  comments: [{ id: 1, body: "some comment", postId: 1 }],
+  profile: { name: "typicode" }
 });

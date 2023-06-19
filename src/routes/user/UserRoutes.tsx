@@ -8,8 +8,6 @@ const UserRoutes = () => {
     <UserAuthProvider>
       <RenderRoutes>
         <RenderRoute
-          // loader
-          // errorElement
           path="/"
           element={
             <PrivateRoute>
