@@ -1,0 +1,8 @@
+{
+  "short_name": "Base structure",
+  "name": "This is my base structure for front end development",
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#000000",
+  "background_color": "#ffffff"
+}
