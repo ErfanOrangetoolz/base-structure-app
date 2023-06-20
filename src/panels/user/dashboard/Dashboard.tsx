@@ -1,4 +1,6 @@
 import Categories from "./categories/Categories";
+import LatestOffer from "./products/lates-offer/LatestOffer";
+import NewArrivalProducts from "./products/new-arrival/NewArrivalProducts";
 import UpcomingProducts from "./products/upcoming/UpcomingProducts";
 
 const Dashboard: React.FC<React.PropsWithChildren> = ({ children }) => {
@@ -7,17 +9,14 @@ const Dashboard: React.FC<React.PropsWithChildren> = ({ children }) => {
       {children}
       <Categories />
       <UpcomingProducts />
-      <Products type="latest" />
-      <Products type="new arrival" />
+      <LatestOffer />
+      <NewArrivalProducts />
       <Brands />
       https://www.binarylogic.com.bd/
     </div>
   );
 };
 export default Dashboard;
-const Products = ({ type = "upcoming" }) => {
-  return <p>this is {type} products</p>;
-};
 const Brands = () => {
   return <p>this is our brand list</p>;
 };
