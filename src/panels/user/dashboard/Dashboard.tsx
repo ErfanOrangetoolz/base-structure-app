@@ -1,3 +1,4 @@
+import Brands from "./brands/Brands";
 import Categories from "./categories/Categories";
 import LatestOffer from "./products/lates-offer/LatestOffer";
 import NewArrivalProducts from "./products/new-arrival/NewArrivalProducts";
@@ -17,6 +18,3 @@ const Dashboard: React.FC<React.PropsWithChildren> = ({ children }) => {
   );
 };
 export default Dashboard;
-const Brands = () => {
-  return <p>this is our brand list</p>;
-};
