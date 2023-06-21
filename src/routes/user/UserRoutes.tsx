@@ -16,6 +16,7 @@ const UserRoutes = () => {
           }
         >
           <RenderRoute path="dashboard" element={<Dashboard />} />
+          <RenderRoute path="base-structure-app" element={<Dashboard />} />
         </RenderRoute>
         <RenderRoute
           path="/categories"
