@@ -1,3 +1,5 @@
+import Categories from "panels/user/categories/Categories";
+import CategoryDetails from "panels/user/categories/CategoryDetails";
 import Dashboard from "panels/user/dashboard/Dashboard";
 import { RenderOutLet, RenderRoute, RenderRoutes } from "third-party-package-handler/RouterHelper";
 import PrivateRoute from "./PrivateRoute";
@@ -15,8 +17,9 @@ const UserRoutes = () => {
             </PrivateRoute>
           }
         >
-          <RenderRoute path="dashboard" element={<Dashboard />} />
+          <RenderRoute index={true} path="" element={<Dashboard />} />
           <RenderRoute path="base-structure-app" element={<Dashboard />} />
+          <RenderRoute path="base-structure-app/" element={<Dashboard />} />
         </RenderRoute>
         <RenderRoute
           path="/categories"
@@ -26,7 +29,8 @@ const UserRoutes = () => {
             </PrivateRoute>
           }
         >
-          <RenderRoute path=":id" element={<Dashboard />} />
+          <RenderRoute index={true} path="" element={<Categories />} />
+          <RenderRoute path=":name" element={<CategoryDetails />} />
           <RenderRoute path="add" element={<Dashboard />} />
           <RenderRoute path="edit/:id" element={<Dashboard />} />
           <RenderRoute path="add-products-to-category/:id" element={<Dashboard />} />
@@ -45,7 +49,8 @@ const UserRoutes = () => {
           <RenderRoute path="add-into-category" element={<Dashboard />} />
         </RenderRoute>
         <RenderRoute path="/login" element={<div>login</div>} />
-        <RenderRoute path="*" element={<div>no match route</div>} />
+        <RenderRoute path="*" element={<Dashboard />} />
+        {/* <RenderRoute path="*" element={<div>no match found</div>} /> */}
       </RenderRoutes>
     </UserAuthProvider>
   );
