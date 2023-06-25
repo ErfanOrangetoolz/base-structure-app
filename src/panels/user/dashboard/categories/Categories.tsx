@@ -1,3 +1,6 @@
+/* eslint-disable import/no-extraneous-dependencies */
+import { Typography } from "@mui/material";
+import Grid from "@mui/material/Grid";
 import EachCategory from "./EachCategory";
 import Styles from "./css/categories.module.css";
 
@@ -10,23 +13,27 @@ const eachCategory = {
 const Categories: React.FC = () => {
   return (
     <div className={Styles.container}>
-      <h2 className={Styles.headerTxt}>FEATURED CATEGORY</h2>
+      <Typography variant="h4" className={Styles.headerTxt}>
+        FEATURED CATEGORY
+      </Typography>
       <div className={Styles.listWrp}>
-        <EachCategory {...eachCategory} />
-        <EachCategory {...eachCategory} />
-        <EachCategory {...eachCategory} />
-        <EachCategory {...eachCategory} />
-        <EachCategory {...eachCategory} />
-        <EachCategory {...eachCategory} />
-        <EachCategory {...eachCategory} />
-        <EachCategory {...eachCategory} />
-        <EachCategory {...eachCategory} />
-        <EachCategory {...eachCategory} />
-        <EachCategory {...eachCategory} />
-        <EachCategory {...eachCategory} />
-        <EachCategory {...eachCategory} />
-        <EachCategory {...eachCategory} />
-        <EachCategory {...eachCategory} />
+        <Grid container spacing={2}>
+          <EachCategory {...eachCategory} />
+          <EachCategory {...eachCategory} />
+          <EachCategory {...eachCategory} />
+          <EachCategory {...eachCategory} />
+          <EachCategory {...eachCategory} />
+          <EachCategory {...eachCategory} />
+          <EachCategory {...eachCategory} />
+          <EachCategory {...eachCategory} />
+          <EachCategory {...eachCategory} />
+          <EachCategory {...eachCategory} />
+          <EachCategory {...eachCategory} />
+          <EachCategory {...eachCategory} />
+          <EachCategory {...eachCategory} />
+          <EachCategory {...eachCategory} />
+          <EachCategory {...eachCategory} />
+        </Grid>
       </div>
     </div>
   );

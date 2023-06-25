@@ -1,3 +1,5 @@
+// eslint-disable-next-line import/no-extraneous-dependencies
+import { Box, Grid } from "@mui/material";
 import { useNavigatorHook } from "third-party-package-handler/RouterHelper";
 import Styles from "./css/categories.module.css";
 
@@ -17,12 +19,14 @@ const EachCategory = ({ id, name, link }: Category) => {
   };
 
   return (
-    <div className={Styles.eachCategoryWrp} onClick={goToLink} aria-hidden="true">
-      <span className={Styles.categoryTitle}>{name}</span>
-      <div className={Styles.categoryImg}>
-        <img src={link} alt={name} />
-      </div>
-    </div>
+    <Grid item xs={12} sm={6} lg={3}>
+      <Box className={Styles.eachCategoryWrp} onClick={goToLink} aria-hidden="true">
+        <span className={Styles.categoryTitle}>{name}</span>
+        <div className={Styles.categoryImg}>
+          <img src={link} alt={name} />
+        </div>
+      </Box>
+    </Grid>
   );
 };
 export default EachCategory;
