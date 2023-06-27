@@ -40,7 +40,7 @@
     "url-loader": "^4.1.1"
   },
   "scripts": {
-    "start": "PORT=7011 react-scripts start",
+    "start": "react-scripts start",
     "build": "react-scripts build",
     "lint": "npx eslint \"src/**/*{.js,.jsx}\"",
     "lint:fix": "npx eslint \"src/**/*{.js,.jsx}\" --fix",
