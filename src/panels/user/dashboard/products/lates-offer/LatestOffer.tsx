@@ -1,3 +1,4 @@
+import { Grid, Typography } from "@mui/material";
 import EachLatestOfferProduct from "./EachLatestOfferProduct";
 import Styles from "./css/latest-offer-product.module.css";
 
@@ -15,18 +16,22 @@ const LatestOffer: React.FC = () => {
   return (
     <div className={Styles.container}>
       <div className={Styles.header}>
-        <h2 className={Styles.headerTxt}>Latest Offer</h2>
+        <Typography variant="h5" className={Styles.headerTxt}>
+          Latest Offer
+        </Typography>
       </div>
       <div className={Styles.productsWrp}>
-        <EachLatestOfferProduct {...product} />
-        <EachLatestOfferProduct {...product} />
-        <EachLatestOfferProduct {...product} />
-        <EachLatestOfferProduct {...product} />
-        <EachLatestOfferProduct {...product} />
-        <EachLatestOfferProduct {...product} />
-        <EachLatestOfferProduct {...product} />
-        <EachLatestOfferProduct {...product} />
-        <EachLatestOfferProduct {...product} />
+        <Grid container spacing={2}>
+          <EachLatestOfferProduct {...product} />
+          <EachLatestOfferProduct {...product} />
+          <EachLatestOfferProduct {...product} />
+          <EachLatestOfferProduct {...product} />
+          <EachLatestOfferProduct {...product} />
+          <EachLatestOfferProduct {...product} />
+          <EachLatestOfferProduct {...product} />
+          <EachLatestOfferProduct {...product} />
+          <EachLatestOfferProduct {...product} />
+        </Grid>
       </div>
     </div>
   );

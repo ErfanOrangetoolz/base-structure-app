@@ -33,7 +33,7 @@
 /* each product */
 .productWrp {
   height: 190px;
-  width: 415px;
+  /* width: 415px; */
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -42,6 +42,7 @@
   overflow: hidden;
   padding: 10px;
   box-sizing: border-box;
+  border-radius: 4px;
 }
 .imgWrp {
   width: 100%;

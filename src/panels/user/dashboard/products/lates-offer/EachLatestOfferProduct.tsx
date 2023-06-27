@@ -1,3 +1,4 @@
+import { Box, Button, Grid, Typography } from "@mui/material";
 import Styles from "./css/latest-offer-product.module.css";
 
 interface UpcomingProduct {
@@ -25,18 +26,28 @@ const EachLatestOfferProduct = ({
     return null;
   };
   return (
-    <div className={Styles.productWrp} onClick={handleClick} aria-hidden="true">
-      <div className={Styles.imgWrp}>
-        <img src={image} alt={title} title={title} />
-      </div>
-      <div className={Styles.productInfoWrp}>
-        <div className={Styles.productPrice}>
-          <span className={Styles.previousPrice}>৳ {prviousPrice}</span>
-          <span className={Styles.currentPrice}>৳ {currentPrice}</span>
+    <Grid item xs={12} sm={6} lg={4}>
+      <div className={Styles.productWrp} onClick={handleClick} aria-hidden="true">
+        <div className={Styles.imgWrp}>
+          <img src={image} alt={title} title={title} />
         </div>
-        <h4 className={Styles.productTitle}>{title}</h4>
+        <div className={Styles.productInfoWrp}>
+          <div className={Styles.productPrice}>
+            <Typography className={Styles.previousPrice}>৳ {prviousPrice}</Typography>
+            <Typography className={Styles.currentPrice}>৳ {currentPrice}</Typography>
+          </div>
+          <Typography variant="body2" className={Styles.productTitle}>
+            {title}
+          </Typography>
+
+          <Box textAlign={"center"}>
+            <Button variant="contained" size="small" sx={{ fontSize: 12 }}>
+              BUY NOW
+            </Button>
+          </Box>
+        </div>
       </div>
-    </div>
+    </Grid>
   );
 };
 export default EachLatestOfferProduct;

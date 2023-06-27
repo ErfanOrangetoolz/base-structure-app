@@ -1,3 +1,4 @@
+import { Grid, Typography } from "@mui/material";
 import Styles from "./css/upcoming-product.module.css";
 
 interface UpcomingProduct {
@@ -16,12 +17,16 @@ const EachUpcomingProduct = ({ id, title, image }: UpcomingProduct) => {
     return null;
   };
   return (
-    <div className={Styles.productWrp} onClick={handleClick} aria-hidden="true">
-      <div className={Styles.imgWrp}>
-        <img src={image} alt={title} title={title} />
+    <Grid item xs={12} sm={6} lg={3}>
+      <div className={Styles.productWrp} onClick={handleClick} aria-hidden="true">
+        <div className={Styles.imgWrp}>
+          <img src={image} alt={title} title={title} />
+        </div>
+        <Typography variant="body2" className={Styles.productTitle}>
+          {title}
+        </Typography>
       </div>
-      <h4 className={Styles.productTitle}>{title}</h4>
-    </div>
+    </Grid>
   );
 };
 export default EachUpcomingProduct;

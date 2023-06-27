@@ -1,3 +1,4 @@
+import { Grid, Typography } from "@mui/material";
 import EachUpcomingProduct from "./EachUpcomingProduct";
 import Styles from "./css/upcoming-product.module.css";
 
@@ -12,14 +13,18 @@ const UpcomingProducts: React.FC = () => {
   return (
     <div className={Styles.container}>
       <div className={Styles.header}>
-        <h2 className={Styles.headerTxt}>Upcoming Products</h2>
+        <Typography variant="h5" className={Styles.headerTxt}>
+          Upcoming Products
+        </Typography>
       </div>
       <div className={Styles.productsWrp}>
-        <EachUpcomingProduct {...product} />
-        <EachUpcomingProduct {...product} />
-        <EachUpcomingProduct {...product} />
-        <EachUpcomingProduct {...product} />
-        <EachUpcomingProduct {...product} />
+        <Grid container spacing={2}>
+          <EachUpcomingProduct {...product} />
+          <EachUpcomingProduct {...product} />
+          <EachUpcomingProduct {...product} />
+          <EachUpcomingProduct {...product} />
+          {/* <EachUpcomingProduct {...product} /> */}
+        </Grid>
       </div>
     </div>
   );

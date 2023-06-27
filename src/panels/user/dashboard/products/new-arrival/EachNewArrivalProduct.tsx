@@ -1,3 +1,4 @@
+import { Grid, Typography } from "@mui/material";
 import Styles from "./css/new-arrival-product.module.css";
 
 interface UpcomingProduct {
@@ -25,18 +26,22 @@ const EachNewArrivalProduct = ({
     return null;
   };
   return (
-    <div className={Styles.productWrp} onClick={handleClick} aria-hidden="true">
-      <div className={Styles.imgWrp}>
-        <img src={image} alt={title} title={title} />
-      </div>
-      <div className={Styles.productInfoWrp}>
-        <div className={Styles.productPrice}>
-          <span className={Styles.previousPrice}>৳ {prviousPrice}</span>
-          <span className={Styles.currentPrice}>৳ {currentPrice}</span>
+    <Grid item xs={12} sm={6} lg={3}>
+      <div className={Styles.productWrp} onClick={handleClick} aria-hidden="true">
+        <div className={Styles.imgWrp}>
+          <img src={image} alt={title} title={title} />
         </div>
-        <h4 className={Styles.productTitle}>{title}</h4>
+        <div className={Styles.productInfoWrp}>
+          <div className={Styles.productPrice}>
+            <Typography className={Styles.previousPrice}>৳ {prviousPrice}</Typography>
+            <Typography className={Styles.currentPrice}>৳ {currentPrice}</Typography>
+          </div>
+          <Typography variant="body2" className={Styles.productTitle}>
+            {title}
+          </Typography>
+        </div>
       </div>
-    </div>
+    </Grid>
   );
 };
 export default EachNewArrivalProduct;

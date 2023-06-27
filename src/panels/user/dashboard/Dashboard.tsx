@@ -1,4 +1,3 @@
-import Brands from "./brands/Brands";
 import Categories from "./categories/Categories";
 import LatestOffer from "./products/lates-offer/LatestOffer";
 import NewArrivalProducts from "./products/new-arrival/NewArrivalProducts";
@@ -12,7 +11,7 @@ const Dashboard: React.FC<React.PropsWithChildren> = ({ children }) => {
       <UpcomingProducts />
       <LatestOffer />
       <NewArrivalProducts />
-      <Brands />
+      {/* <Brands /> */}
       https://www.binarylogic.com.bd/
     </div>
   );

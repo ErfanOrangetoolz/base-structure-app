@@ -67,8 +67,8 @@ const Sidebar = () => {
       sx={{
         width: "100%",
         maxWidth: 288,
-        bgcolor: "background.paper",
-        px: "20px"
+        bgcolor: "background.paper"
+        // px: "20px"
       }}
       component="nav"
       aria-labelledby="nested-list-subheader"

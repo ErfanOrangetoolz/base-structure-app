@@ -32,13 +32,14 @@
 }
 /* each product */
 .productWrp {
-  height: 345px;
-  width: 250px;
+  /* height: 345px; */
+  /* width: 250px; */
   display: flex;
   flex-direction: column;
   align-items: center;
   background-color: #fff;
   cursor: pointer;
+  border-radius: 4px;
 }
 .imgWrp {
   width: 100%;
@@ -59,7 +60,7 @@
   font-size: 14px;
   color: #111;
   text-align: center;
-  padding: 10px;
+  padding: 25px 10px;
   box-sizing: border-box;
   overflow: hidden;
 }
