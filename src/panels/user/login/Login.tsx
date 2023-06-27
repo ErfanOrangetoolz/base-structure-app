@@ -11,19 +11,19 @@ const Login = () => {
   };
 
   return (
-    <Grid container sx={{ height: "100%" }}>
+    <Grid container sx={{ height: "calc(100vh - 16px)" }}>
       <Grid xs={6}>
         <Stack
           alignItems={"center"}
           justifyContent={"center"}
-          bgcolor={"black"}
+          bgcolor={"#2097C1"}
           sx={{ flex: 1, height: "100%" }}
         >
-          <img src={logo} alt="logo" />
+          <img src={logo} alt="logo" width={"100%"} />
         </Stack>
       </Grid>
-      <Grid xs={6}>
-        <Stack alignItems={"center"} justifyContent={"center"} sx={{ flex: 1 }}>
+      <Grid xs={6} sx={{ flex: 1, height: "100%" }}>
+        <Stack sx={{ flex: 1, height: "100%" }} alignItems={"center"} justifyContent={"center"}>
           <Container maxWidth="sm">
             <Typography variant="h4" align="center" gutterBottom>
               Login
