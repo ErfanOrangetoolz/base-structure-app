@@ -89,7 +89,35 @@ const Sidebar = () => {
         <StyledListItemIcon>
           <AddIcon />
         </StyledListItemIcon>
+        <ListItemText primary="Categories" />
+      </StyledListItemButton>
+
+      <StyledListItemButton>
+        <StyledListItemIcon>
+          <AddIcon />
+        </StyledListItemIcon>
+        <ListItemText primary="Products" />
+      </StyledListItemButton>
+
+      <StyledListItemButton>
+        <StyledListItemIcon>
+          <AddIcon />
+        </StyledListItemIcon>
+        <ListItemText primary="Offer List" />
+      </StyledListItemButton>
+
+      <StyledListItemButton>
+        <StyledListItemIcon>
+          <AddIcon />
+        </StyledListItemIcon>
         <ListItemText primary="Add Product" />
+      </StyledListItemButton>
+
+      <StyledListItemButton>
+        <StyledListItemIcon>
+          <AddIcon />
+        </StyledListItemIcon>
+        <ListItemText primary="Add Product asf asdf asdf " />
       </StyledListItemButton>
 
       {/* <StyledListItemButton onClick={handleClick}>

@@ -20,10 +20,8 @@ const AuthLayout = ({ children }: Props) => {
 
         <Box sx={{ flex: 1 }}>
           <Navbar />
-
           <Box sx={{ bgcolor: "#F2F3F3", height: "93.5%", position: "relative" }} p={3}>
             {children}
-
             <FabWithPopper />
           </Box>
         </Box>
