@@ -1,9 +1,9 @@
 import { Button, Container, Grid, Stack, TextField, Typography } from "@mui/material";
-import LogoLightText from "assets/icons/LogoLightText";
+import { logo } from "assets/images/ImageLink";
 import { useState } from "react";
 
 const Login = () => {
-  const [email, setEmail] = useState("");
+  const [userName, setUserName] = useState("");
   const [password, setPassword] = useState("");
 
   const handleLogin = () => {
@@ -11,60 +11,54 @@ const Login = () => {
   };
 
   return (
-    <>
-      <Grid container sx={{ height: "100%" }}>
-        <Grid xs={6}>
-          <Stack
-            alignItems={"center"}
-            justifyContent={"center"}
-            bgcolor={"black"}
-            sx={{ flex: 1, height: "100%" }}
-          >
-            <LogoLightText />
-          </Stack>
-        </Grid>
-        <Grid xs={6}>
-          <Stack alignItems={"center"} justifyContent={"center"} sx={{ flex: 1 }}>
-            <Container maxWidth="sm">
-              <Typography variant="h4" align="center" gutterBottom>
-                Login
-              </Typography>
-              <TextField
-                label="Email"
-                type="email"
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
-                fullWidth
-                margin="normal"
-              />
-              <TextField
-                label="Password"
-                type="password"
-                value={password}
-                onChange={(e) => setPassword(e.target.value)}
-                fullWidth
-                margin="normal"
-              />
-              <Button
-                sx={{ mt: 2 }}
-                variant="contained"
-                color="primary"
-                onClick={handleLogin}
-                fullWidth
-              >
-                Login
-              </Button>
-            </Container>
-          </Stack>
-        </Grid>
+    <Grid container sx={{ height: "100%" }}>
+      <Grid xs={6}>
+        <Stack
+          alignItems={"center"}
+          justifyContent={"center"}
+          bgcolor={"black"}
+          sx={{ flex: 1, height: "100%" }}
+        >
+          <img src={logo} alt="logo" />
+        </Stack>
       </Grid>
-      {/* <Stack direction={"row"}>
-        <Box bgcolor={"black"} sx={{ flex: 1 }}>
-          asd
-        </Box>
-        <Box sx={{ flex: 1 }}>asd</Box>
-      </Stack> */}
-    </>
+      <Grid xs={6}>
+        <Stack alignItems={"center"} justifyContent={"center"} sx={{ flex: 1 }}>
+          <Container maxWidth="sm">
+            <Typography variant="h4" align="center" gutterBottom>
+              Login
+            </Typography>
+            <TextField
+              label="Email"
+              type="text"
+              value={userName}
+              placeholder="Enter email"
+              onChange={(e) => setUserName(e.target.value)}
+              fullWidth
+              margin="normal"
+            />
+            <TextField
+              label="Password"
+              placeholder="Enter password"
+              type="password"
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
+              fullWidth
+              margin="normal"
+            />
+            <Button
+              sx={{ mt: 2 }}
+              variant="contained"
+              color="primary"
+              onClick={handleLogin}
+              fullWidth
+            >
+              Login
+            </Button>
+          </Container>
+        </Stack>
+      </Grid>
+    </Grid>
   );
 };
 
