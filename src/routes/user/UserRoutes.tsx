@@ -21,7 +21,6 @@ const UserRoutes = () => {
           <RenderRoute index={true} path="" element={<Dashboard />} />
           <RenderRoute path="base-structure-app" element={<Dashboard />} />
           <RenderRoute path="base-structure-app/" element={<Dashboard />} />
-          <RenderRoute path="login" element={<Login />} />
         </RenderRoute>
         <RenderRoute
           path="/categories"
@@ -50,7 +49,8 @@ const UserRoutes = () => {
           <RenderRoute path="edit/:id" element={<Dashboard />} />
           <RenderRoute path="add-into-category" element={<Dashboard />} />
         </RenderRoute>
-        <RenderRoute path="/login" element={<div>login</div>} />
+        <RenderRoute path="/login" element={<Login />} />
+        {/* <RenderRoute path="/login" element={<div>login</div>} /> */}
         <RenderRoute path="*" element={<Dashboard />} />
         {/* <RenderRoute path="*" element={<div>no match found</div>} /> */}
       </RenderRoutes>
