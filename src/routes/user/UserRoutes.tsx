@@ -1,6 +1,7 @@
 import Categories from "panels/user/categories/Categories";
 import CategoryDetails from "panels/user/categories/CategoryDetails";
 import Dashboard from "panels/user/dashboard/Dashboard";
+import Login from "panels/user/login/Login";
 import { RenderOutLet, RenderRoute, RenderRoutes } from "third-party-package-handler/RouterHelper";
 import PrivateRoute from "./PrivateRoute";
 import { UserAuthProvider } from "./UserAuthProvider";
@@ -20,6 +21,7 @@ const UserRoutes = () => {
           <RenderRoute index={true} path="" element={<Dashboard />} />
           <RenderRoute path="base-structure-app" element={<Dashboard />} />
           <RenderRoute path="base-structure-app/" element={<Dashboard />} />
+          <RenderRoute path="login" element={<Login />} />
         </RenderRoute>
         <RenderRoute
           path="/categories"

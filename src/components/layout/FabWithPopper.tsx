@@ -1,5 +1,6 @@
 // import AddIcon from "@mui/icons-material/Add";
 import { Box, Fab, Fade, Popper, Stack, Typography, styled } from "@mui/material";
+import AddIcon from "assets/icons/AddIcon";
 import React, { useRef, useState } from "react";
 
 const StyledArrow = styled("span")({
@@ -37,13 +38,13 @@ const FabWithPopper = () => {
     <Box
       sx={{
         "& > :not(style)": { m: 1 },
-        position: "absolute",
+        position: "fixed",
         bottom: 50,
         right: 50
       }}
     >
       <Fab color="primary" aria-label="add" ref={arrowRef} onClick={handleClick}>
-        {/* <AddIcon /> */}
+        <AddIcon fill="white" />
       </Fab>
 
       <Popper
@@ -95,12 +96,12 @@ const FabWithPopper = () => {
             >
               <Stack direction={"row"} spacing={2}>
                 <Stack spacing={1} alignItems={"center"} border={1} p={2} borderColor={"lightGray"}>
-                  {/* <AddIcon /> */}
+                  <AddIcon />
                   <Typography variant="body1">Lorem, ipsum dolor</Typography>
                 </Stack>
 
                 <Stack spacing={1} alignItems={"center"} border={1} p={2} borderColor={"lightGray"}>
-                  {/* <AddIcon /> */}
+                  <AddIcon />
                   <Typography variant="body1">Lorem, ipsum dolor</Typography>
                 </Stack>
               </Stack>
