@@ -2,6 +2,7 @@
   "name": "my-pharmacy",
   "version": "0.0.1",
   "private": true,
+  "homepage": "https://ErfanOrangetoolz.github.io/base-structure-app",
   "dependencies": {
     "@emotion/react": "^11.11.1",
     "@emotion/styled": "^11.11.0",
