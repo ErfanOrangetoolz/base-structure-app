@@ -12,6 +12,7 @@ const PrivateRoute = ({ children }: Props) => {
       <h2>a body container</h2>
       {children}
 
+      {/* keep this editor code */}
       <Editor
         apiKey="ptgxtryj2toyk5csxrpybtvg42i6c5gzpwiw1xlc61dqsjbn"
         initialValue="<p>This is the initial content of the editor.</p>"
