@@ -1,5 +1,6 @@
 import AddCategory from "panels/console/categories/AddCategory";
 import Categories from "panels/console/categories/Categories";
+import Login from "panels/console/login/Login";
 import { Outlet, Route, Routes } from "react-router-dom";
 import { RenderOutLet } from "third-party-package-handler/RouterHelper";
 import PrivateRoute from "./PrivateRoute";
@@ -29,7 +30,7 @@ const ConsoleRoutes = () => {
           <Route path="add" element={<div> admin products add component</div>} />
         </Route>
       </Route>
-      <Route path="/console/login" element={<div>login</div>} />
+      <Route path="/console/login" element={<Login />} />
       <Route path="*" element={<div>no match route</div>} />
     </Routes>
   );

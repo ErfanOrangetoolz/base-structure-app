@@ -1,7 +1,6 @@
 import Categories from "panels/user/categories/Categories";
 import CategoryDetails from "panels/user/categories/CategoryDetails";
 import Dashboard from "panels/user/dashboard/Dashboard";
-import Login from "panels/user/login/Login";
 import { RenderOutLet, RenderRoute, RenderRoutes } from "third-party-package-handler/RouterHelper";
 import PrivateRoute from "./PrivateRoute";
 import { UserAuthProvider } from "./UserAuthProvider";
@@ -49,7 +48,6 @@ const UserRoutes = () => {
           <RenderRoute path="edit/:id" element={<Dashboard />} />
           <RenderRoute path="add-into-category" element={<Dashboard />} />
         </RenderRoute>
-        <RenderRoute path="/login" element={<Login />} />
         {/* <RenderRoute path="/login" element={<div>login</div>} /> */}
         <RenderRoute path="*" element={<Dashboard />} />
         {/* <RenderRoute path="*" element={<div>no match found</div>} /> */}
