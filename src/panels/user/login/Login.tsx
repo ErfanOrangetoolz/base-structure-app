@@ -40,10 +40,10 @@ const Login = () => {
           display: "flex",
           alignItems: "center",
           justifyContent: "center",
-          bgcolor: "text.primary"
+          bgcolor: "#2097C1"
         }}
       >
-        <img src={logo} width={"100%"} alt="FTPO Logo" />
+        <img src={logo} width={"100%"} alt="Brand Logo" />
       </Grid>
 
       {/* Right side */}
@@ -128,7 +128,7 @@ const Login = () => {
           </Box>
 
           <Box textAlign={"center"} mt={4}>
-            <Typography variant="body2">@ 2023 FTPO - All Rights Reserved</Typography>
+            <Typography variant="body2">@ 2023 My base structure - All Rights Reserved</Typography>
             <Typography variant="body2" color={"other.primaryDark"}>
               Terms of services & privacy policy
             </Typography>
