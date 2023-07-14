@@ -6,7 +6,7 @@ const CategoryHeader = () => {
       direction={"row"}
       justifyContent={"space-between"}
       alignItems={"center"}
-      py={3}
+      p={3}
       // sx={{borderBottom: `${border ? '1px solid' : ''}`}}
       borderBottom={"1px solid"}
       borderColor={"other.divider"}
