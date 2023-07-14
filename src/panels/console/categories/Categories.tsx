@@ -1,4 +1,5 @@
 import { RenderOutLet } from "third-party-package-handler/RouterHelper";
+import CategoryHeader from "./CategoryHeader";
 import CategoryList from "./CategoryList";
 
 const Categories = () => {
@@ -6,6 +7,8 @@ const Categories = () => {
     <div>
       <RenderOutLet />
       <div>
+        <CategoryHeader />
+
         <CategoryList />
       </div>
     </div>
