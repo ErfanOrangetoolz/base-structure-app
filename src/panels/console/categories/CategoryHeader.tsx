@@ -1,6 +1,9 @@
 import { Button, Stack, Typography } from "@mui/material";
+import { useNavigatorHook } from "third-party-package-handler/RouterHelper";
 
 const CategoryHeader = () => {
+  const navigation = useNavigatorHook();
+
   return (
     <Stack
       direction={"row"}
@@ -17,7 +20,11 @@ const CategoryHeader = () => {
         <Typography variant="h5">Category List</Typography>
       </Stack>
 
-      <Button variant="contained" startIcon={"+"}>
+      <Button
+        variant="contained"
+        startIcon={"+"}
+        onClick={() => navigation("/console/category/add")}
+      >
         Add Category
       </Button>
     </Stack>

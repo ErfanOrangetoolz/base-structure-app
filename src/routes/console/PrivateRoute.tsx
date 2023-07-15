@@ -23,8 +23,6 @@ const PrivateRoute = ({ children }: Props) => {
           <Box sx={{ bgcolor: "#F2F3F3", height: "93.5%", position: "relative" }} p={3}>
             {children}
             <FabWithPopper />
-            {/* <h2>a left side menu panel</h2>
-            <h2>a body container</h2> */}
 
             {/* keep this editor code */}
             {/* <Editor

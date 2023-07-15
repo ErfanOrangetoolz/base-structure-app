@@ -1,5 +1,6 @@
 import { Box, Button, TextField, Typography } from "@mui/material";
 import { Editor } from "@tinymce/tinymce-react";
+import CustomCircleLoader from "components/loaders/CustomCircleLoader";
 
 const AddCategory = () => {
   return (
@@ -43,6 +44,7 @@ const AddCategory = () => {
         />
 
         <Button variant="contained" sx={{ mt: 3 }}>
+          <CustomCircleLoader size="extra-small" fill="#fff" />
           Add New Category
         </Button>
       </Box>

@@ -16,9 +16,8 @@ const ConsoleRoutes = () => {
           </PrivateRoute>
         }
       >
-        <Route path="category" element={<Categories />}>
-          <Route path="add" element={<AddCategory />} />
-        </Route>
+        <Route path="category" element={<Categories />} />
+        <Route path="category/add" element={<AddCategory />} />
         <Route
           path="products"
           element={
